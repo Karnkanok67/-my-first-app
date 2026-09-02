@@ -101,11 +101,11 @@ ans2 = st.text_input(
 )    
 ans2 = st.text_input(
     "ข้อ 2: Cats love to eat `B _ n _ na`. 🍌",
-    value=st.session_state.ans2_val,
+    value=st.session_state.ans3_val,
 )
 ans4 = st.text_input(
     "ข้อ 2: Cats love to eat `P _ n`. 🖊️",
-    value=st.session_state.ans2_val,
+    value=st.session_state.ans4_val,
 
 # อัปเดตค่าล่าสุดเข้าตัวแปร
 st.session_state.ans1_val = ans1
@@ -128,6 +128,7 @@ if "start" in st.session_state and not st.session_state.get("is_ended", False):
 # 5. แสดง Dialog ผลลัพธ์
 if st.session_state.get("is_ended", False):
     show_result_dialog(ans1, ans2)
+if st.session_state.get("is_ended", False): 
     show_result_dialog(ans3, ans4)
 
 st.divider()
